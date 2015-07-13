@@ -1,0 +1,2 @@
+class RecoveryPatient < Patient
+end

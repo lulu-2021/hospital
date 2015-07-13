@@ -1,0 +1,2 @@
+class InfectiousPatient < Patient
+end

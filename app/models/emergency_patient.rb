@@ -1,0 +1,2 @@
+class EmergencyPatient < Patient
+end

@@ -1,0 +1,32 @@
+Notes on Interview Task:
+
+These are just step by step notes so you can follow how I completed the task - mainly so you have a bit of a better
+idea of how I work, thought this might be helpful.
+
+App is called Hospital
+
+# - generate an object model (using standard UML notation)
+# - generate a database diagram (using standard UML notation)
+
+==> I don't always do the diagrams - really depends on the type of project. I felt it would help here since we don't have an interface.
+
+# - using RVM - created a gemset (using ruby 2.2.2)
+# - generated a new app
+# - configured the gems needed
+# - bundle install
+# - added my standard .gitignore
+# - initialized the git repo
+# - removed the standard config/database.yml  (my gitignore ensures this is not copied to the repo)
+# - added a shared folder - which is added to the .gitignore
+# - added a database.yml file to the shared directory
+# - created the DEV and TEST databases
+# - run rails migrations for the tables referenced in the data model.
+# - I usually stard the TDD process once the migrations are run - i.e. at this point the models do not yet exist!
+	(I don't have any preference on this - just feels better this way as the tests are created first)
+# - I added the UUID extension to this - since I am using postgres on my current DEV machine - and like this feature
+    (out of habit) - for the purpose of this small app - not required - I just did it because I could.. :)
+# - DEV and TEST db's migrated
+# - Configured the app for using RSPEC and added a range of helpers to run tests without the RAILS framework!
+# - added a rake task for testing and guard to run all the tests automatically
+# - now I can run bundle exec guard - to have all the tests run with every change - tight feedback loop!
+# -

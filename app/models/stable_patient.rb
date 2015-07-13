@@ -1,0 +1,2 @@
+class StablePatient < Patient
+end

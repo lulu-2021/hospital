@@ -17,4 +17,13 @@ describe EmergencyPatient do
       expect(FactoryGirl.create(:emergency_patient)).to be_valid
     end
   end
+
+  context 'testing the inheritance_column model type' do
+    it 'should have an inheritance_column patient_type with the value of the model name' do
+      expect(EmergencyPatient.inheritance_column).to eq 'patient_type'
+
+      test_patient = FactoryGirl.build(:emergency_patient)
+      expect(test_patient.patient_type).to eq 'EmergencyPatient'
+    end
+  end
 end

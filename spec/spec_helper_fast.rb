@@ -11,6 +11,7 @@ RSpec.configure do |config|
 end
 # - This enables us to search automatically in app/models
 $:.unshift File.expand_path '../../app/models', __FILE__
+$:.unshift File.expand_path '../../app/models/validators', __FILE__
 #
 # this requires all the FactoryGirl factories
 Dir.glob(File.expand_path 'spec/factories/*.rb').each { |f| require f }

@@ -41,8 +41,9 @@ ActiveRecord::Schema.define(version: 20150713094444) do
   add_index "patients", ["identifier"], name: "index_patients_on_identifier", unique: true, using: :btree
 
   create_table "rooms", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
-    t.uuid   "ward_id"
-    t.string "identifier", limit: 50
+    t.uuid    "ward_id"
+    t.string  "identifier", limit: 50
+    t.integer "beds_count",            default: 0
   end
 
   add_index "rooms", ["identifier"], name: "index_rooms_on_identifier", unique: true, using: :btree

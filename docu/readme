@@ -8,6 +8,8 @@ App is called Hospital
 # - generate an object model (using standard UML notation)
 # - generate a database diagram (using standard UML notation)
 
+The docu folder that has this text file has the two images that contain the object and data model diagrams in JPG format
+
 ==> I don't always do the diagrams - really depends on the type of project. I felt it would help here since we don't have an interface.
 
 # - using RVM - created a gemset (using ruby 2.2.2)
@@ -31,4 +33,4 @@ App is called Hospital
 # - now I can run bundle exec guard - to have all the tests run with every change - tight feedback loop!
 # - Added the patient and child patients spec files and then the actual models
 # - Added the ward and child wards spec files and then the actual models
-# - 
+# -

@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20150713094444) do
   add_index "beds", ["room_id"], name: "index_beds_on_room_id", using: :btree
 
   create_table "patients", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+    t.uuid     "ward_id"
     t.string   "identifier",   limit: 50
     t.string   "patient_type"
     t.string   "first_name",   limit: 50
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(version: 20150713094444) do
   end
 
   add_index "patients", ["identifier"], name: "index_patients_on_identifier", unique: true, using: :btree
+  add_index "patients", ["ward_id"], name: "index_patients_on_ward_id", using: :btree
 
   create_table "rooms", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
     t.uuid    "ward_id"

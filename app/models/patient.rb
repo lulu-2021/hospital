@@ -4,4 +4,6 @@ class Patient < ActiveRecord::Base
   self.inheritance_column = :patient_type
 
   has_one :bed
+
+  belongs_to :ward
 end

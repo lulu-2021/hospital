@@ -1,0 +1,2 @@
+class RecoveryWard < Ward
+end

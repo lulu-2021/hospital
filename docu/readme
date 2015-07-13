@@ -29,4 +29,5 @@ App is called Hospital
 # - Configured the app for using RSPEC and added a range of helpers to run tests without the RAILS framework!
 # - added a rake task for testing and guard to run all the tests automatically
 # - now I can run bundle exec guard - to have all the tests run with every change - tight feedback loop!
-# -
+# - Added the patient and child patients spec files and then the actual models
+# - Added the ward and child wards spec files and then the actual models

@@ -1,0 +1,2 @@
+class StableWard < Ward
+end

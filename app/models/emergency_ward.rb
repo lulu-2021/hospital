@@ -1,0 +1,2 @@
+class EmergencyWard < Ward
+end

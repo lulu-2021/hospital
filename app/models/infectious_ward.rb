@@ -1,0 +1,2 @@
+class InfectiousWard < Ward
+end

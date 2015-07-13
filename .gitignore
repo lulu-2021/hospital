@@ -1,0 +1,24 @@
+# database configuration files
+/config/database.yml
+/shared/*.yml
+#
+# Ignore all logfiles and tempfiles.
+*.rbc
+*.swp
+capybara-*.html
+.rspec
+/log
+/tmp
+/db/*.sqlite3
+/public/system
+/public/uploads
+/coverage/
+/spec/tmp
+**.orig
+rerun.txt
+pickle-email-*.html
+#
+## Environment normalisation:
+/.bundle
+/vendor/bundle
+

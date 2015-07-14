@@ -1,6 +1,11 @@
 require 'active_record_spec_helper'
 require 'spec_helper_fast'
 #
+require 'bed_validatable'
+require 'bed_validator'
+require 'ward_type_validatable'
+require 'ward_type_validator'
+#
 require 'patient'
 require 'ward'
 require 'room'
@@ -22,7 +27,7 @@ describe Bed do
 
   context 'a bed can only have one patient' do
     it 'the bed is valid with an associated patient' do
-      test_patient = FactoryGirl.create(:patient)
+      test_patient = FactoryGirl.create(:stable_patient)
       test_bed = FactoryGirl.build(:bed, patient_id: test_patient.id)
       expect(test_bed).to be_valid
     end

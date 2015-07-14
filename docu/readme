@@ -34,4 +34,7 @@ The docu folder that has this text file has the two images that contain the obje
 # - Added the patient and child patients spec files and then the actual models
 # - Added the ward and child wards spec files and then the actual models
 # - Added specs for testing that the room can only have 4 beds by way of maintaining a counter_cache & added this to the migrations
-# - 
+# - Added custom validation to the patient - to ensure they can only be in a ward of the correct type
+
+NB: Make the process of adding a patient to a BED depedant on also adding the patient to a WARD which will run
+the custom validation!

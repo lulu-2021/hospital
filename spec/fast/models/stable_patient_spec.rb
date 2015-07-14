@@ -1,6 +1,9 @@
 require 'active_record_spec_helper'
 require 'spec_helper_fast'
 #
+require 'ward_type_validatable'
+require 'ward_type_validator'
+#
 require 'patient'
 require 'stable_patient'
 #

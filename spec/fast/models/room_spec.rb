@@ -1,9 +1,6 @@
 require 'active_record_spec_helper'
 require 'spec_helper_fast'
 #
-require 'bed_count_validatable'
-require 'bed_count_validator'
-#
 require 'patient'
 require 'bed'
 require 'ward'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150713094444) do
+ActiveRecord::Schema.define(version: 20150713095502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150713094444) do
 
   create_table "patients", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
     t.uuid     "ward_id"
+    t.uuid     "bed_id"
     t.string   "identifier",   limit: 50
     t.string   "patient_type"
     t.string   "first_name",   limit: 50
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(version: 20150713094444) do
     t.datetime "updated_at",              null: false
   end
 
+  add_index "patients", ["bed_id"], name: "index_patients_on_bed_id", using: :btree
   add_index "patients", ["identifier"], name: "index_patients_on_identifier", unique: true, using: :btree
   add_index "patients", ["ward_id"], name: "index_patients_on_ward_id", using: :btree
 

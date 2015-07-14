@@ -4,4 +4,6 @@ class Ward < ActiveRecord::Base
   self.inheritance_column = :ward_type
 
   has_many :rooms
+
+  validates_presence_of :ward_type
 end

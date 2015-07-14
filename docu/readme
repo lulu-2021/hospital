@@ -12,6 +12,18 @@ The docu folder that has this text file has the two images that contain the obje
 
 ==> I don't always do the diagrams - really depends on the type of project. I felt it would help here since we don't have an interface.
 
+Comments:
+# - I chose to use Single Table Inheritance for the Patient (type) and the Ward (type) as this meant I could
+    model the different types as clean separate Models and have all the data in single tables
+    The real benefit of this comes out when you can use a single controller and set the "type" in the routes.rb
+    file making the code nice and dry. It might seem a little overkill for this small excercise - but I tend to think
+    in terms of long term maintainability and extensibility.
+
+# - I chose to configure Rspec as I normally do i.e. create a bunch of helper methods allowing me to test all the model
+    code in complete isolation from the Rails framework - in this case only loading AR and the DB connection.
+    This makes tests run in seconds rather than minutes.
+
+Actual work steps:
 # - using RVM - created a gemset (using ruby 2.2.2)
 # - generated a new app
 # - configured the gems needed
@@ -23,7 +35,7 @@ The docu folder that has this text file has the two images that contain the obje
 # - added a database.yml file to the shared directory
 # - created the DEV and TEST databases
 # - run rails migrations for the tables referenced in the data model.
-# - I usually stard the TDD process once the migrations are run - i.e. at this point the models do not yet exist!
+# - I usually start the TDD process once the migrations are run - i.e. at this point the models do not yet exist!
 	(I don't have any preference on this - just feels better this way as the tests are created first)
 # - I added the UUID extension to this - since I am using postgres on my current DEV machine - and like this feature
     (out of habit) - for the purpose of this small app - not required - I just did it because I could.. :)

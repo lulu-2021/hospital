@@ -6,7 +6,5 @@ FactoryGirl.define do
     sequence(:identifier) {|n| "BEDID-#{n}" }
 
     room
-    patient
-    
   end
 end

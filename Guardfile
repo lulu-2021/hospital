@@ -6,6 +6,7 @@ guard 'rake', :task => 'tests:select:fast' do
   watch(%r{^app/models/(.+)\.rb})
   watch(%r{^app/lib/(.+)\.rb})
   watch(%r{^spec/fast/models/(.+)\.rb})
+  watch(%r{^spec/fast/lib/(.+)\.rb})
 end
 #
 # - watch the controllers and spec/controller folders for changes and run the tests!

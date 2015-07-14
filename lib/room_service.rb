@@ -3,7 +3,7 @@
 # bed. Your solution should provide an interface to facilitate this.
 class RoomService
 
-  def move_patient_allocate_new_bed(patient_id, new_room_id, free_bed)
+  def move_patient_allocate_new_bed(patient_id, new_room_id, free_bed_id)
     patient = Patient.find(patient_id)
     ward = patient.ward
     bed = patient.bed
@@ -12,7 +12,7 @@ class RoomService
     new_room_ward = new_room.ward
     # - if the new room is in the same ward allocate the new bed and update the patients ward
     if ward.ward_type == new_room_ward.ward_type
-      patient.bed_id = free_bed.id
+      patient.bed_id = free_bed_id
       patient.ward_id = new_room_ward.id
       patient.save
       puts "Move Completed"
@@ -34,6 +34,7 @@ class RoomService
       bed.save
 
       patient.ward_id = new_room_ward.id
+      patient.bed_id = bed.id
       patient.save
       puts "Move completed!"
     else

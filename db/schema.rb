@@ -19,14 +19,12 @@ ActiveRecord::Schema.define(version: 20150713095502) do
 
   create_table "beds", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
     t.uuid     "room_id"
-    t.uuid     "patient_id"
     t.string   "identifier", limit: 50
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
   end
 
   add_index "beds", ["identifier"], name: "index_beds_on_identifier", unique: true, using: :btree
-  add_index "beds", ["patient_id"], name: "index_beds_on_patient_id", using: :btree
   add_index "beds", ["room_id"], name: "index_beds_on_room_id", using: :btree
 
   create_table "patients", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
